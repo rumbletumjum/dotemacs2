@@ -31,6 +31,8 @@
       inhibit-startup-message t
       initial-scratch-message nil)
 
+(setq warning-suppress-types '((comp)))
+
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq ring-bell-function 'ignore)
 (setq-default indent-tabs-mode nil)
