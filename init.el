@@ -79,3 +79,7 @@
   :after evil
   :config
   (evil-collection-init))
+
+(use-package vterm
+  :straight t
+  :commands (vterm))
