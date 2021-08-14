@@ -26,6 +26,11 @@
       auto-save-default nil
       create-lockfiles nil)
 
+(setq inhibit-startup-screen t
+      inhibit-startup-echo-area-message t
+      inhibit-startup-message t
+      initial-scratch-message nil)
+
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq ring-bell-function 'ignore)
 (setq-default indent-tabs-mode nil)
