@@ -13,6 +13,22 @@
 
 (straight-use-package 'use-package)
 
+;; Sanity
+(if (fboundp 'menu-bar-mode)
+    (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode)
+    (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
+
+(setq make-backup-files nil
+      auto-save-default nil
+      create-lockfiles nil)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+(setq ring-bell-function 'ignore)
+(setq-default indent-tabs-mode nil)
+
 (use-package magit
   :straight t
   :commands (magit-status)
