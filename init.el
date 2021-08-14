@@ -88,6 +88,15 @@
              evilnc-inner-comment
              evilnc-outer-commenter))
 
+(use-package evil-surround
+  :straight t
+  :after evil
+  :commands (global-evil-surround-mode
+             evil-surround-edit
+             evil-Surround-edit
+             evil-surround-region)
+  :config (global-evil-surround-mode 1))
+
 (use-package evil-collection
   :straight t
   :after evil
