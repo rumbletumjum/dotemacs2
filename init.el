@@ -81,11 +81,12 @@
   (evil-set-initial-state 'messages-buffer-mode 'normal)
   (evil-set-initial-state 'dashboard-mode 'normal))
 
-(use-package evil-commentary
+(use-package evil-nerd-commenter
   :straight t
   :after evil
-  :config
-  (evil-commentary-mode))
+  :commands (evilnc-comment-operator
+             evilnc-inner-comment
+             evilnc-outer-commenter))
 
 (use-package evil-collection
   :straight t
